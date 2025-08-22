@@ -263,12 +263,18 @@ header{
   height: 40px;
 }
 
+.trusted_icon_slide img {
+  min-height: 15px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
 .trusted_slider {
   min-height: 70px;
 }
 /* hero section */
 .hero_image{
-  min-height: 240px;
+  min-height: 136px;
 }
 
 /* =========================
