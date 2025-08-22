@@ -1,39 +1,74 @@
-*{
-    text-decoration: none !important;
+/* =========================
+   Global Resets & Utilities
+========================= */
+* {
+  text-decoration: none !important;
 }
-.navbar {
-      background-color: white;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1); 
-    }
-    .nav_logo {
-      background-color: white;
-      width: 70px;
-      height: auto;
-      object-fit: cover;
-    }
-    .nav-link {
-      font-weight: 500;
-      color: #333;
-      position: relative;
-    }
-    .nav-link::after{
-        position: absolute;
-        content: '';
-        height: 2px;
-        width: 0;
-        background-color: var(--yellow);
-        left: 50%;
-        transition: all 300ms linear;
-        bottom: -2px;
-    }
-    .nav-link:hover::after{
-        left: 0;
-        width: 100%;
-    }
-    .nav-link:hover {
-      color: var(--yellow);
-    }
 
+.object_fit_cover {
+  object-fit: cover;
+}
+
+.two-line-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.three-line-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* =========================
+   Navbar
+========================= */
+.navbar {
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.nav_logo {
+  background-color: white;
+  width: 70px;
+  height: auto;
+  object-fit: cover;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #333;
+  position: relative;
+}
+
+.nav-link::after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 0;
+  background-color: var(--yellow);
+  left: 50%;
+  bottom: -2px;
+  transition: all 300ms linear;
+}
+
+.nav-link:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: var(--yellow);
+}
+
+/* =========================
+   Buttons
+========================= */
 .common_button {
   display: inline-block;
   padding: 7px 16px;
@@ -47,15 +82,18 @@
 }
 
 .common_button:hover {
-  transform: rotate(-0deg) scale(1.05);
+  transform: scale(1.05);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .common_button:active {
-  transform: rotate(0deg) scale(1);
+  transform: scale(1);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+/* =========================
+   Image Hover Effects
+========================= */
 .img-hover-scale {
   transition: transform 0.3s ease;
 }
@@ -64,225 +102,236 @@
   transform: scale(1.05);
 }
 
-.trusted_icon_slide{
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    height: 40px;
-   
+/* =========================
+   Trusted Section
+========================= */
+.trusted_icon_slide {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  height: 40px;
 }
 
-/* success stories section */
-      .success_slider  .custom-card {
-            border-radius: 15px;
-            border: 1px solid var(--yellow);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-      .success_slider  .custom-card {
-            border-radius: 15px;
-            border: 1px solid var(--yellow);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+.trusted_slider {
+  min-height: 70px;
+}
 
-        .success_slider  .custom-card:hover {
-         box-shadow: 2px 2px 5px var(--yellow);
-        }
-        .success_slider  .custom-card:hover img{
-          scale: 1.1;
-        }
-        .success_slider  .custom-card img{
-          transition: all 200ms linear;
-          object-fit: cover;
-        }
+/* =========================
+   Success Stories
+========================= */
+.success_slider .custom-card {
+  border-radius: 15px;
+  border: 1px solid var(--yellow);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        /* Style for the custom arrows */
+.success_slider .custom-card:hover {
+  box-shadow: 2px 2px 5px var(--yellow);
+}
+
+.success_slider .custom-card img {
+  transition: all 200ms linear;
+  object-fit: cover;
+}
+
+.success_slider .custom-card:hover img {
+  scale: 1.1;
+}
+
+/* Custom arrows */
 .success_section .custom-arrow {
-    border: 0 !important;
-    border-radius: 100%;
-    transform: translateY(-50%) !important;  
-    background-color:var(--yellow) !important;
-    font-size: 20px !important;
-    font-weight: bold;
-    height: 40px !important;
-    width: 40px !important;
-    z-index: 10;
+  border: 0 !important;
+  border-radius: 100%;
+  transform: translateY(-50%) !important;
+  background-color: var(--yellow) !important;
+  font-size: 20px !important;
+  font-weight: bold;
+  height: 40px !important;
+  width: 40px !important;
+  z-index: 10;
 }
 
-
-      
-.two-line-text {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;  /* Limit to 2 lines */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.three-line-text {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;  /* Limit to 2 lines */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-/* ai section start here */
-.ai_logo{
+/* =========================
+   AI Section
+========================= */
+.ai_logo {
   max-width: 200px;
   border-radius: 100%;
 }
 
-
-.object_fit_cover{
-  object-fit: cover;
-}
-
-.timeline_main_parent{
+.timeline_main_parent {
   border-top: 4px solid var(--yellow);
   position: relative;
 }
-.timeline_main_parent .timeline_card{
+
+.timeline_main_parent .timeline_card {
   position: relative;
   background-color: #f5a30a34;
   padding: 10px;
   border: 1px solid var(--yellow);
 }
 
-.timeline_main_parent .timeline_card::after{
-position: absolute;
-content: '';
-background-color: var(--yellow);
-width: 4px;
-height: 20px;
-top: -20px;
-left: 50%;
-transform: translateX(-50%);
-}
-
-.ai_image{
-  position: relative;
-}
-
-.ai_image::after{
+.timeline_main_parent .timeline_card::after {
   position: absolute;
   content: '';
   background-color: var(--yellow);
-width: 4px;
-height: 40px;
-bottom: -50px;
-left: 50%;
-transform: translateX(-50%);
+  width: 4px;
+  height: 20px;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
+.ai_image {
+  position: relative;
+}
 
-/* logistics slider section */
+.ai_image::after {
+  position: absolute;
+  content: '';
+  background-color: var(--yellow);
+  width: 4px;
+  height: 40px;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
-.logistics_slider div img{
+/* =========================
+   Logistics Section
+========================= */
+.logistics_slider div img {
   height: 200px !important;
-  width: 350px!important;
+  width: 350px !important;
   border-radius: 20px;
   border: 2px solid var(--yellow);
   object-fit: cover !important;
 }
 
-/* technology section  */
-.technology_shopneo_logo img{
+/* =========================
+   Technology Section
+========================= */
+.technology_shopneo_logo img {
   background-color: #f5a30a73;
   padding: 20px;
   border-radius: 51% 49% 70% 30% / 30% 44% 56% 70%;
   animation: rotate_animation 3s linear infinite;
 }
 
-.technology_top_left{
+.technology_top_left {
   top: 10px;
   left: -50px;
   rotate: 180deg;
 }
-.technology_top_right{
+
+.technology_top_right {
   top: 200px;
   right: -50px;
 }
 
-.commision_box{
+/* =========================
+   Commission Boxes
+========================= */
+.commision_box {
   background-color: #f5a30a7a;
   padding: 10px;
   border-radius: 10px;
   transition: all 300ms linear;
 }
-.commision_box:hover{
+
+.commision_box:hover {
   background-color: var(--yellow);
 }
-.minial_commision_box{
+
+.minial_commision_box {
   background-color: #f5a30a7a;
   padding: 20px;
   border-radius: 10px;
   transition: all 300ms linear;
 }
-.minial_commision_box img{
-width: 100%;
+
+.minial_commision_box img {
+  width: 100%;
 }
-.minial_commision_box:hover{
+
+.minial_commision_box:hover {
   background-color: #f5a30a8a;
   scale: 1.1;
 }
 
+/* =========================
+   Accordion
+========================= */
 .accordion-button::after {
   background-color: white !important;
   border-radius: 4px;
 }
 
-.footer_social_links li a i{
+/* =========================
+   Footer
+========================= */
+.footer_social_links li a i {
   transition: all 300ms linear;
   opacity: 75% !important;
 }
-.footer_social_links li a i:hover{
+
+.footer_social_links li a i:hover {
   opacity: 100% !important;
   color: var(--yellow);
 }
 
-.footer_links ul li a{ transition: all 300ms linear;
-opacity: 75% !important;}
-.footer_links ul li a:hover{color: var(--yellow) !important;
-opacity: 100% !important;}
-
-@keyframes rotate_animation {
-  0%{
-
-border-radius: 51% 49% 70% 30% / 30% 44% 56% 70%;
-
-  }
-  50%{
-border-radius: 100% 0% 100% 0% / 0% 99% 1% 100% ;
-  }
-
-  75%{
-border-radius: 79% 21% 83% 17% / 0% 100% 0% 100% ;
-  }
-  
+.footer_links ul li a {
+  transition: all 300ms linear;
+  opacity: 75% !important;
 }
 
+.footer_links ul li a:hover {
+  color: var(--yellow) !important;
+  opacity: 100% !important;
+}
+
+/* =========================
+   Animations
+========================= */
+@keyframes rotate_animation {
+  0% {
+    border-radius: 51% 49% 70% 30% / 30% 44% 56% 70%;
+  }
+  50% {
+    border-radius: 100% 0% 100% 0% / 0% 99% 1% 100%;
+  }
+  75% {
+    border-radius: 79% 21% 83% 17% / 0% 100% 0% 100%;
+  }
+}
+
+/* =========================
+   Media Queries
+========================= */
 @media (min-width:576px) {
-    .trusted_icon_slide{
+  .trusted_icon_slide {
     height: 70px;
     padding: 10px;
-}
-.timeline_main_parent .timeline_card::after{
-top: -26px;
-}
+  }
 
-.custom-arrow {
+  .timeline_main_parent .timeline_card::after {
+    top: -26px;
+  }
+
+  .custom-arrow {
     font-size: 28px !important;
     height: 48px !important;
     width: 48px !important;
+  }
 }
-}
+
 @media (min-width:768px) {
- .logistics_slider div img{
-  height: 300px !important;
-  width: 100%!important;
-  object-fit: cover !important;
-}
+  .logistics_slider div img {
+    height: 300px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+  }
 }
