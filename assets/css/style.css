@@ -266,6 +266,10 @@ header{
 .trusted_slider {
   min-height: 70px;
 }
+/* hero section */
+.hero_image{
+  min-height: 240px;
+}
 
 /* =========================
    Success Stories
@@ -336,6 +340,9 @@ header{
 
 .ai_image {
   position: relative;
+}
+.ai_imageimg{
+  min-height: 200px;
 }
 
 .ai_image::after {
